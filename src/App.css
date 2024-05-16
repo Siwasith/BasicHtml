@@ -40,3 +40,21 @@
 .read-the-docs {
   color: #888;
 } */
+
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  margin: 20px;
+}
+
+div {
+  margin: 20px;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+}
