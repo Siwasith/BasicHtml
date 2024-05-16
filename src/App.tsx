@@ -20,7 +20,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("https://pokeapi.co/api/v2/pokemon/snorlax")
+      .get("https://pokeapi.co/api/v2/pokemon/pikachu")
       .then((response) => {
         setPokemon(response.data);
         setLoading(false);
