@@ -1,54 +1,22 @@
 // src/App.tsx
-import { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "../../components/Navbar/Navbar";
-import axios from "axios";
-
-// Define a TypeScript interface for the Pokemon data
-interface Pokemon {
-  name: string;
-  height: number;
-  weight: number;
-  base_experience: number;
-  sprites: {
-    front_default: string;
-  };
-}
 
 function App() {
-  const [pokemon, setPokemon] = useState<Pokemon | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    axios
-      .get("https://pokeapi.co/api/v2/pokemon/pikachu")
-      .then((response) => {
-        setPokemon(response.data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        setError(error.message);
-        setLoading(false);
-      });
-  }, []);
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error fetching data: {error}</p>;
-
   return (
     <>
       <Navbar />
-      <h1 className="text-3xl font-bold">Hello world!</h1>
-      {pokemon && (
-        <div>
-          <h2 className="text-2xl">{pokemon.name}</h2>
-          <img src={pokemon.sprites.front_default} alt={pokemon.name} />
-          <p>Height: {pokemon.height}</p>
-          <p>Weight: {pokemon.weight}</p>
-          <p>Base Experience: {pokemon.base_experience}</p>
+      <div className="flex justify-center items-center mt-32 md:mt-40 flex-col">
+        <div className="text-center text-3xl md:text-5xl  w-4/5 md:w-3/5 font-extrabold font-mono leading-tight tracking-tighter">
+          Passionate software developer with a flair for creating efficient and
+          user centric solutions.
         </div>
-      )}
+        <div className="text-center text-xl	md:text-base w-4/5 md:w-3/5 font-bold font-mono tracking-tighter my-5 text-neutral-500">
+          Seasoned in [specific programming languages or technologies], adept at
+          crafting innovative solutions that drive efficiency and exceed
+          expectations.
+        </div>
+      </div>
     </>
   );
 }

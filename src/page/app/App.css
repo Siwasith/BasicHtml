@@ -45,11 +45,12 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #171717;
+  color: white;
 }
 
-h1 {
+/* h1 {
   margin: 20px;
-}
+} */
 
 div {
   margin: 0px;
