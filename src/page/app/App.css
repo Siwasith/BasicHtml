@@ -44,6 +44,7 @@
 /* App.css */
 body {
   font-family: Arial, sans-serif;
+  background-color: #171717;
 }
 
 h1 {
@@ -51,7 +52,7 @@ h1 {
 }
 
 div {
-  margin: 20px;
+  margin: 0px;
 }
 
 img {

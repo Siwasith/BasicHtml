@@ -1,5 +1,7 @@
+// src/App.tsx
 import { useState, useEffect } from "react";
 import "./App.css";
+import Navbar from "../../components/Navbar/Navbar";
 import axios from "axios";
 
 // Define a TypeScript interface for the Pokemon data
@@ -36,6 +38,7 @@ function App() {
 
   return (
     <>
+      <Navbar />
       <h1 className="text-3xl font-bold">Hello world!</h1>
       {pokemon && (
         <div>
